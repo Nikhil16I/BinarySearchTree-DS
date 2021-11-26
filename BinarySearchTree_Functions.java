@@ -28,6 +28,16 @@ public void PrintOrder() {
 		
 	}
 	
+	
+	public static int Size(Node Root) { 
+		                          
+		if (Root == null)
+			return 0;
+		
+		return Size(Root.LeftNode) +  1  + Size(Root.RightNode);
+
+	}
+	
 	public void Inorder(Node node) {
 		if (node==null) {
 			return;
@@ -41,11 +51,25 @@ public void PrintOrder() {
 	public static void main(String[] args) {
 		
 		BinarySearchTree_Functions newlist = new BinarySearchTree_Functions();
+		
 		Node Root = newlist.insertElements(null, 56); 
 		Node secondnode = newlist.insertElements(Root, 30);
-	    Node thirdnode = newlist.insertElements(secondnode, 70);
-	    
+	    Node thirdnode = newlist.insertElements(Root, 70);
+	    Node node4th = newlist.insertElements(Root, 22);
+	    Node node5th =newlist.insertElements(Root, 40);
+	    Node node6th=newlist.insertElements(Root, 11);
+	    Node node7t=newlist.insertElements(Root, 3);
+	    Node node8th=newlist.insertElements(Root, 16);
+	    Node node9th=newlist.insertElements(Root, 60);
+	    Node node10th=newlist.insertElements(Root, 95);
+	    Node node11th=newlist.insertElements(Root, 65);
+	    Node node12th=newlist.insertElements(Root, 63);
+	    Node node13th=newlist.insertElements(Root, 67);
+
 		newlist.PrintOrder();
+		newlist.Size(Root);
+		System.out.println("Tree size is = " + Size(Root));
+
 	}
 	
 
