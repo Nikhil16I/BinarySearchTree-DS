@@ -32,9 +32,9 @@ public void PrintOrder() {
 		if (node==null) {
 			return;
 		}
-		Inorder(node.RightNode);
-		System.out.println(node.Data);
 		Inorder(node.LeftNode);
+		System.out.println(node.Data);
+		Inorder(node.RightNode);
 		
 	}
 	
@@ -45,7 +45,6 @@ public void PrintOrder() {
 		Node secondnode = newlist.insertElements(Root, 30);
 	    Node thirdnode = newlist.insertElements(secondnode, 70);
 	    
-		System.out.println();
 		newlist.PrintOrder();
 	}
 	
